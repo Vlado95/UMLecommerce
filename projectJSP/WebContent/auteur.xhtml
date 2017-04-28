@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets" >    
+    <h:head>
+        <title>Vue Auteur JSF 2.0</title>
+    </h:head>
+    <h:body>
+    <h1>Auteur JSF 2.2 </h1>
+        <h:form>
+           <h:inputText value="#{beanAuteur.like}" />
+           <h:commandButton value="Chercher un Auteur" action="auteurResponse" />
+        </h:form>
+        <a href="index.xhtml">Menu</a>
+        
+        
+        
+        <h3>Persons List</h3>
+	
+		<table class="tg">
+			<tr>
+				<th width="80">Auteur ID</th>
+				<th width="120">Auteur Name</th>
+				<th width="120">Auteur Prenom</th>
+			</tr>
+			<ui:repeat value="#{beanAuteur.allAuteurs}" var="auteur">
+				<tr>
+					<td>${auteur.id}</td>
+					<td>${auteur.nom}</td>
+					<td>${auteur.prenom}</td>
+				</tr>
+			</ui:repeat>
+		</table>
+        
+    </h:body>
+</html>

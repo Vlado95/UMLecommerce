@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14932900205940" configfile="/projectJSP/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="auteur" x="122" y="178" id="pf14933013308131" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14933013308132" path="/auteur.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="auteurResponse" x="338" y="178" id="pf14933013308133" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14933013308134" inlinks="pf14933013308132" path="/auteurResponse.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="554" y="178" id="pf14933013308145" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14933013308134" path="/index.xhtml"/>
+  <links id="pf14933013308132" target="pf14933013308133" source="pf14933013308131" redirect="true" fromaction="#{beanAuteur.like}"/>
+  <links id="pf14933013308134" target="pf14933013308145" source="pf14933013308133" outcome="success" redirect="true" fromaction="#{auteurResponse.result}"/>
+</pageflow:Pageflow>

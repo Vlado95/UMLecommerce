@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Auteur Réponse JSF 2.2</title>
+</h:head>
+ <h:body>
+ <p>Msg : #{auteurResponse.msg}</p>
+ <f:verbatim>Auteur recherche ...:</f:verbatim>
+        <p>Bienvenue #{beanAuteur.like} !</p>
+        <h:inputText id ="expr" value="#{auteurResponse.expression}" />
+        <p:watermark for="expr" value="#{beanAuteur.like}" />  
+        <h:commandButton value="Check Expression" action="auteur" />
+ <h1>Result Bean : #{auteurResponse.msg}</h1>     
+ <a href="index.xhtml">Menu</a>
+</h:body>
+</html>
